@@ -40,6 +40,57 @@ tensorflow_nlp
 - 데이터 나누기
 - Train , validation , Test set을 나누어 준다.
 - 데이터 나눈거 시각화 하기
-- model.summary 통해서 요약보기 ### feat input_shape =[] ###
+- model.summary 통해서 요약보기 ### input_shape =[] ###
 - model.fit(verbose = 0) 하면 진행상황 안보여줌
 - model.summary 를 도식화 해줄 수 있다.(안되면 코랩에서 해봐)
+- 예측 값 시각화
+- metrics MAE와 MSE
+- evaluate(X_test, y_test) mae 확인
+- .squeeze() shape 조정
+- model_1 : 이전 모델과 같은데, 학습을 더 시킨다 성능이 더 안좋아짐
+- model_2 : 레이어를 더 추가! 성능은 좋아짐
+- model_3 : model_2과 같게 하고 epoch를 늘려본다 성능이 이상해짐
+- model_results 한눈에 모델들 성능 보기
+- 모델 저장 방법
+- 예시) model_2.save("best_model_SavedModel_format")
+- 예시) model_2.save("best_model_SavedModel_format.h5")
+- 모델 불러오기
+- 예시)tf.keras.models.load_model("best_model_SavedModel_format.h5")
+- insurance csv 파일 불러오기
+- 수치형 데이터로 바꿔주기
+- 예시)  pd.get_dummies(insurance)
+- 테스트와 라벨 데이터 만들기
+- 학습시키기
+- insurance_model_1 이전 모델로 학습(레이어 두개)
+- insurance_model_2 이전 모델로 학습(레이어 세개)
+- history 확인
+- loss와 epoch 관계 보기 (시각화)
+- 모델 개선이 필요하다
+
+
+
+# tensorflow_003
+- 텐서플로우 테스트용 예제 데이터 from sklearn.datasets import make_circles
+- make circles 이용해 데이터셋 만들기(원 형태의 모델임)
+- binary classification과 multiclass classification
+- 모델을 조금식 개선해보기
+- 모델 시각화
+- model_1 레이어 하나짜리 딥러닝(BinaryCrossentropy,SGD,accuracy,epochs = 100)
+- model_2 레이어 두개짜리 딥러닝
+- model_3 레이어 세개짜리 딥러닝 + 아담
+- plot decision bundary 함수 작성 (시각화)
+- model_4 모델에 액티베이션과, 러닝 레이트 바꿔주기
+- model_5 모델에 액티베이션을 relu를 주기
+
+- model_6 레이어 두개에 relu주기
+- model_7 마지막 레이어에 sigmoid를 주기(정확도 좋아짐)
+- 러닝레이트에 따른 모델의 학습 정도
+- model_8 러닝레이트를 0.01로 변경
+- history 통해서 이상적 그래프 확인
+- model_9 러닝 레이트 점점 커지게 만들기
+- 러닝 레이트와 LOSS와의 관계
+- model_10 최적의 러닝 레이트로 학습 시키기 0.02
+- 주요 metrics 
+
+## https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_circles.html#sklearn.datasets.make_circles
+## https://playground.tensorflow.org/#activation=relu&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=2,2&seed=0.93799&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false&regularization_hide=true&regularizationRate_hide=true&batchSize_hide=true
