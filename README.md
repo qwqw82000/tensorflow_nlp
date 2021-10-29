@@ -90,7 +90,17 @@ tensorflow_nlp
 - model_9 러닝 레이트 점점 커지게 만들기
 - 러닝 레이트와 LOSS와의 관계
 - model_10 최적의 러닝 레이트로 학습 시키기 0.02
-- 주요 metrics 
+- 주요 metrics 살펴보기(confusion matrix)
+- confusion matrix 그려보기
+- fashion mnist가지고 multiclass classification 하기
+- model_11 fashion mnist의 모델 만들기 (soft max 사용하기)(성능 별로임) 
+- normalization하기 0~255 -> 0~ 1
+- model_12 fashion mnist 데이터 정규화 후 학습
+- model_13 epoch 100번으로 늘림
+- 러닝 레이트 점점 크게 해주는 모델 통해서 최적의 러닝 레이트 찾기(그래프)
+- model_14 최적의 러닝 레이트로 학습(0.01)(0.03)(0.002) 하지만 성능 별로임
+
+
 
 ## https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_circles.html#sklearn.datasets.make_circles
 ## https://playground.tensorflow.org/#activation=relu&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=2,2&seed=0.93799&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false&regularization_hide=true&regularizationRate_hide=true&batchSize_hide=true
