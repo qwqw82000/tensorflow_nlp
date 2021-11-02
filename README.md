@@ -100,7 +100,36 @@ tensorflow_nlp
 - 러닝 레이트 점점 크게 해주는 모델 통해서 최적의 러닝 레이트 찾기(그래프)
 - model_14 최적의 러닝 레이트로 학습(0.01)(0.03)(0.002) 하지만 성능 별로임
 
+**# transfer learning_001**
 
+- zip file은 데이터앞축 해제용 라이브러리
+
+`os.walk()`는 하위의 폴더들을 for문으로 탐색할 수 있게 해줍니다. 인자로 전달된 path에 대해서 다음 3개의 값이 있는 tuple을 넘겨줍니다.
+
+- root : dir과 files가 있는 path
+- dirs : root 아래에 있는 폴더들
+- files : root 아래에 있는 파일들
+- 이미지 전처리 하기(ImageDataGenerator)
+- https://3months.tistory.com/199 ImageDataGenerator 참고 블로그
+- callback복습(특별한 기능 추가) epoch마다 학습이 어떻게 되는지 확인
+- callback으로 텐서보드 만들기 (함수)
+- tensorflow_hub 사용하기
+- 전이학습 만들기(함수)
+- 텐서보드에 저장하기
+
+**# transfer learning_002**
+
+- 
+- 
+
+- 텐서플로우에서 제공하는 모델 사용(EfficientNetB0)
+- model0 학습 (feature extraction model)
+- 데이터 어규멘 테이션
+- model1 학습(1퍼센트 데이터 어규멘테이션)
+- model2 학습(10퍼센트 데이터 어규멘테이션)
+
+- checkpoint callback 함수 만들기
+- 
 
 ## https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_circles.html#sklearn.datasets.make_circles
 ## https://playground.tensorflow.org/#activation=relu&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=2,2&seed=0.93799&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false&regularization_hide=true&regularizationRate_hide=true&batchSize_hide=true
